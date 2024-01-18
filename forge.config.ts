@@ -8,7 +8,7 @@ import { VitePlugin } from '@electron-forge/plugin-vite';
 const config: ForgeConfig = {
   packagerConfig: {},
   rebuildConfig: {},
-  makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
+  makers: [new MakerSquirrel({}), new MakerZIP({}), new MakerRpm({}), new MakerDeb({})],
   publishers: [
     {
       name: '@electron-forge/publisher-github',
@@ -17,7 +17,7 @@ const config: ForgeConfig = {
           owner: 'krystophv',
           name: 'avljs-electron-presentation',
         },
-        draft: true,  
+        draft: true,
       },
     },
   ],

@@ -28,4 +28,49 @@
 
 import './index.css';
 
-console.log('👋 This message is being logged by "renderer.ts", included via Vite');
+import 'reveal.js/dist/reveal.css';
+import 'reveal.js/dist/theme/night.css';
+import 'reveal.js/plugin/highlight/zenburn.css';
+
+import Reveal from 'reveal.js';
+import RevealHighlight from 'reveal.js/plugin/highlight/highlight.esm.js';
+import RevealNotes from 'reveal.js/plugin/notes/notes.esm.js';
+import RevealZoom from 'reveal.js/plugin/zoom/zoom.esm.js';
+
+const plugins = [RevealHighlight, RevealZoom];
+
+const dependencies = [
+  {
+    src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js',
+    async: true,
+  },
+  {
+   src: 'https://reveal-multiplex.glitch.me/client.js',
+   async: true,
+ },
+];
+
+if (window?.MULTIPLEX_SECRET) {
+  dependencies.push({
+    src: 'https://reveal-multiplex.glitch.me/master.js',
+    async: true,
+  });
+  plugins.push(RevealNotes);
+}
+
+const deck = new Reveal({
+  plugins,
+});
+
+deck.initialize({
+  hash: true,
+  multiplex: {
+    secret: window?.MULTIPLEX_SECRET ?? null,
+    id: '6f8e318f27331f05',
+    url: 'https://reveal-multiplex.glitch.me/',
+  },
+  dependencies,
+});
+
+// multiplex _really_ wants to have the Reveal object in the global scope
+window.Reveal = deck;
