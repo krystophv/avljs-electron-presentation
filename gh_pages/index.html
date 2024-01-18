@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>AVL.js Electron Presentation</title>
+  <script type="module" crossorigin src="./assets/index-5700ede8.js"></script>
+  <link rel="stylesheet" href="./assets/index-95704be5.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1 class="r-fit-text">Electron Five Ws</h1>
+        <div style="display:flex;flex-direction:row;width:100%;justify-content: space-evenly;" class="r-stretch">
+          <div style="display:flex;padding:1em;flex-direction: column;">
+            <img src="./assets/electron_app-fd5ee263.svg" alt="Electron App"
+              style="max-width: 100%;height: auto;display:flex;width:30vw" />
+            <p style="font-size: small">Electron Version (Zip recommended)</p>
+          </div>
+          <img src="./assets/electron_logo-7930bf7b.svg" alt="Electron Logo" style=" animation-name: spin;
+          animation-duration: 4000ms;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          display:flex;width:30vw" />
+          <div style="display:flex;padding:1em;flex-direction: column;">
+            <img src="./assets/web-9780c9e1.svg" alt="Web" style="max-width: 100%;height: auto;display:flex;width:30vw" />
+            <p style="font-size:small">Web Version</p>
+          </div>
+        </div>
+
+        <div class="r-stack">
+          <h2 class="fragment fade-in-then-out fade-down">Who am I?</h2>
+          <h2 class="fragment fade-in-then-out fade-down">What is Electron?</h2>
+          <h2 class="fragment fade-in-then-out fade-down">When did Electron begin?</h2>
+          <h2 class="fragment fade-in-then-out fade-down">Where is Electron?</h2>
+          <h2 class="fragment fade-in-then-out fade-down">Why use Electron?</h2>
+          <h2 class="fragment fade-in-then-out fade-down">How do you use Electron?</h2>
+        </div>
+        <aside class="notes">
+          <pre wrap>
+We'll be going over the five Ws of Electron, and then we'll go over how to use it.
+Who am I? Why am I telling you about Electron?
+What is Electron?
+When did Electron begin? A brief history of Electron's origins
+Where is Electron? Who is using it today?
+Why use Electron? What are the benefits of using Electron?
+How do you use Electron? We'll go over how to use Electron to build an app.
+        </pre>
+        </aside>
+      </section>
+
+      <section>
+        <section>
+          <h2>Who am I?</h2>
+          <div style="display:flex">
+            <img src="./assets/Chris-McGee-f1ebaa7c.jpeg" alt="Chris McGee" style="height: 35vh; margin-right: 1em;" />
+            <div>
+              <h3>Chris McGee</h3>
+              <p>Software Engineer, mostly Frontend</p>
+              <p>@krystophv most places on the internet</p>
+            </div>
+          </div>
+          <aside class="notes">
+            I'm Chris McGee, I'm a software engineer at Tidepool.
+            I've been working on JavaScript applications since 2007.
+          </aside>
+        </section>
+        <section>
+          <h2 class="r-fit-text">Why am I telling you about Electron?</h2>
+          <img class="r-stretch" src="./assets/uploader-5d8905f5.png" alt="Tidepool Uploader" />
+          <aside class="notes">
+            <pre wrap>
+What gives me the right? eh?
+Anyone can present about anything and they should.
+Currently at Tidepool - an open source non-profit that helps people with diabetes where I work on the web and Electron Uploader applications and was the principal developer for migrating the Uploader from a Chrome App to Electron.
+Google deprecated Chrome Apps and claimed something like 99% of Chrome Apps could be implemented as web apps. We were the 1%.
+The options at the time were Electron and NW.js. If you've never heard of NW.js, then I think we made the right choice.
+          </pre>
+          </aside>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Where is Electron?</h2>
+          <p>Electron apps are <em>everywhere</em></p>
+          <aside class="notes">
+            Electron apps are everywhere.
+            There's a good chance you're using one right now.
+          </aside>
+        </section>
+        <section>
+          <h2 class="r-fit-text">Notable Electron Apps</h2>
+          <div style="display:flex;">
+            <div style="display: flex;">
+              <ul>
+                <li>Atom</li>
+                <li>Visual Studio Code*</li>
+                <li>Figma</li>
+                <li>Slack</li>
+                <li>Discord</li>
+                <li>Signal</li>
+                <li>Postman</li>
+              </ul>
+            </div>
+            <div style="display: flex;">
+              <ul>
+                <li>WhatsApp</li>
+                <li>Microsoft Teams</li>
+                <li>Skype</li>
+                <li>Notion*</li>
+                <li>WordPress</li>
+                <li>1Password</li>
+                <li>Obsidian</li>
+              </ul>
+            </div>
+          </div>
+          <p><em>* used in the making of this presentation</em></p>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2 class="r-fit-text">Where did Electron come from?</h2>
+          <p class="fragment">The first Atom release February 26, 2014</p>
+          <p class="fragment">Built around a framework called Atom Shell</p>
+          <p class="fragment">Atom Shell was always intended to be a cross-platform framework</p>
+          <p class="fragment">Atom Shell renamed to Electron April 23, 2015</p>
+        </section>
+      </section>
+
+      <section>
+        <section data-auto-animate>
+          <h2>What is Electron?</h2>
+        </section>
+        <section data-auto-animate>
+          <h2>What is Electron?</h2>
+          <p>An electron is an elementary subatomic particle with a charge of negative one.</p>
+          <img class="r-stretch" src="./assets/electron-h-788dbd6f.png" alt="Electron" />
+          <p style="font-size:0.4em">https://www.techtarget.com/whatis/definition/electron</p>
+        </section>
+        <section data-auto-animate>
+          <h2>What is Electron?</h2>
+          <p>Electron is a framework for building desktop applications using JavaScript, HTML, and CSS. - electron.org
+          </p>
+          <aside class="notes">
+            Ok, sure, but what does that mean?
+          </aside>
+        </section>
+        <section data-auto-animate>
+          <h2>What is Electron?</h2>
+          <img class="r-stretch" src="./assets/electron_architecture-388b9eb7.jpg" alt="Electron Architecture" />
+          <p style="font-size:0.4em">
+            https://www.wildnettechnologies.com/build-cross-platform-desktop-apps-with-electron/</p>
+          <aside class="notes">
+            <pre wrap>
+Alright, now we're getting somewhere.
+Electron, in a nutshell, is a Chromium browser and a Node.js runtime bundled together.
+The Chromium browser is the window that you see and interact with.
+The Node.js server is what manages the runtime.
+The main process is where you manage the window and the renderer processes and the renderer processes are where you write your presentation logic.
+Broadly speaking, the main process runs in Node.js   (think Puppeteer) and the renderer processes run in Chromium.
+The main process and the renderer processes communicate with each other using IPC.
+You _can_ opt out of the sandbox, but it's not recommended - you should use preload scripts to expose
+the necessary APIs to the renderer processes.
+          </pre>
+          </aside>
+        </section>
+      </section>
+
+      <section>
+        <section data-auto-animate>
+          <h2>Why use Electron?</h2>
+        </section>
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Reasons to use Electron</h2>
+          <div class="r-stack">
+            <p class="fragment fade-in-then-out fade-down">Web technologies: Electron leverages web technologies, making
+              it easy for web teams to build desktop applications using their existing skills.</p>
+            <p class="fragment fade-in-then-out fade-down">Code reuse: Electron applications can reuse code from your
+              web applications to build your desktop applications.</p>
+            <p class="fragment fade-in-then-out fade-down">Rich ecosystem: NodeJS and Web JavaScript have vibrant and
+              active
+              communities, which means you can find a wide range of plugins, libraries, and resources available.</p>
+            <p class="fragment fade-in-then-out fade-down">Native capabilities: Electron provides access to native APIs,
+              allowing you to leverage the full power of the underlying operating system and integrate with system-level
+              features.</p>
+            <div class="fragment fade-in-then-out fade-down">
+              <p>Cross-platform compatibility: Electron allows you to build desktop applications that can run on
+                Windows, macOS, and Linux without the need for platform-specific code.*</p>
+              <p style="font-size: 0.4em;"><em>* generally</em></p>
+            </div>
+            <p class="fragment fade-in-then-out fade-down">It's <em>enough</em>: Many desktop apps don't do a whole lot
+              more
+              than
+              what a web app can do. <small>(this is foreshadowing)</small></p>
+            </p>
+          </div>
+          <aside class="notes">
+            <pre wrap>
+Do we need to go back to the slide with the list of Electron apps?
+Big web applications already have a web team. Now you've got a desktop team.
+You can generally reuse your web application code to build your desktop application.
+Many desktop applications don't do a whole lot more than what a web app can do, and the lift of having the  separate Chromium and NodeJS runtimes isn't a strain for most modern computers. 
+Optimizations are possible, like using canvas for rendering the terminal in VSCode.
+          </pre>
+          </aside>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2>How easy is it to use Electron?</h2>
+        </section>
+
+        <section>
+          <h2>Electron Fiddle</h2>
+          <div class="r-stack r-stretch">
+            <p class="fragment fade-in-then-out">Electron Fiddle is an Electron development environment that allows you
+              to quickly prototype and experiment with Electron applications.</p>
+          </div>
+        </section>
+        <section>
+          <h2>Electron Fiddle</h2>
+          <iframe class="r-stretch" src="https://www.electronjs.org/fiddle" style="width: 100%;"></iframe>
+          <aside class="notes">
+            <pre wrap>
+A.k.a. yo dawg, I heard you like Electron, so I put Electron in your Electron so you can Electron while you Electron.
+</pre>
+          </aside>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Electron Forge</h2>
+          <div class="r-stack r-stretch">
+            <p class="fragment fade-in-then-out">Electron Forge is a complete toolchain for creating, packaging, and
+              publishing Electron applications.</p>
+            <p class="fragment fade-in-then-out">It provides a set of command-line tools and a powerful API to
+              streamline the development process.</p>
+            <p class="fragment fade-in-then-out">With Electron Forge, you can easily scaffold a new Electron project,
+              manage dependencies, and build distributable packages for different platforms.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="r-fit-text">Install Vite-Typescript Template</h2>
+          <div class="r-stretch" style="margin:auto;">
+            <p>Prerequisites: <code>node</code>, <code>yarn</code></p>
+            <p>Bootstrap your application:</p>
+            <pre><code class="diff">> npm init electron-app@latest my-electron-app \
+            -- --template=vite-typescript</code></pre>
+            <p style="font-size:0.4em">https://www.electronforge.io/#using-templates</p>
+          </div>
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Why Vite and Typescript?</h2>
+          <img class="r-stretch" src="./assets/build_tools_experience_ranking-8adf8477.png" />
+          <p style="font-size:0.4em">https://2022.stateofjs.com/en-US/libraries/build-tools/</p>
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Why Vite and Typescript?</h2>
+          <img class="r-stretch" src="./assets/js_ts_balance-e1a98607.png" />
+          <p style="font-size:0.4em">https://2022.stateofjs.com/en-US/usage/#js_ts_balance</p>
+        </section>
+
+        <section>
+          <h2 class="r-fit-text">Launch the Development App</h2>
+          <p>Navigate to the project directory and run the following command:</p>
+          <pre><code class="bash">> cd my-electron-app
+> yarn start</code></pre>
+          <p>This will launch the Electron application in development mode.</p>
+          <p>You can now make changes to the code and see them reflected in the application.</p>
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Add Reveal.js to the Demo Application</h2>
+          <ol>
+            <li>Add Reveal.js:</li>
+          </ol>
+          <pre><code class="bash">yarn add reveal.js</code></pre>
+          <pre><code class="diff">diff --git a/package.json b/package.json
+index 392543b..bb9898c 100644
+--- a/package.json
++++ b/package.json
+@@ -31,6 +31,7 @@
+     "typescript": "~4.5.4"
+   },
+   "dependencies": {
+-    "electron-squirrel-startup": "^1.0.0"
++    "electron-squirrel-startup": "^1.0.0",
++    "reveal.js": "^5.0.4"
+   }
+ }
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Add Reveal.js to the Demo Application</h2>
+          <ol start="2">
+            <li>Update <code>src/renderer.ts</code></li>
+          </ol>
+          <pre>
+              <code class="diff" data-line-numbers="9-11|13-20" data-trim data-noescape>  
+  diff --git a/src/renderer.ts b/src/renderer.ts
+  index d75993c..0b5f498 100644
+  --- a/src/renderer.ts
+  +++ b/src/renderer.ts
+  @@ -26,6 +26,13 @@
+    * ```
+    */
+  
+  -import './index.css';
+  +import 'reveal.js/dist/reveal.css';
+  +import 'reveal.js/dist/theme/black.css';
+  
+  -console.log('👋 This message is being logged by "renderer.ts", included via Vite');
+  +import Reveal from 'reveal.js';
+  +
+  +const deck = new Reveal({
+  +   plugins: [ ]
+  +})
+  +deck.initialize();
+            </code>
+          </pre>
+        </section>
+
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Add Reveal.js to the Demo Application</h2>
+          <ol start="3">
+            <li>Update <code>index.html</code></li>
+          </ol>
+          <pre class="r-stretch">
+              <code class="diff" data-trim data-line-numbers="9-10|11,26|12,25|13-18">
+                <script type="text/template">diff --git a/index.html b/index.html
+index 68c0aee..a8e74c4 100644
+--- a/index.html
++++ b/index.html
+@@ -6,8 +6,21 @@
+  
+    </head>
+    <body>
+-    <h1>💖 Hello World!</h1>
+-    <p>Welcome to your Electron application.</p>
++    <div class="reveal">
++      <div class="slides">
++        <section>
++          <h1>Reveal.js + Electron</h1>
++          <p>
++            <small>Press <em>space</em> to navigate.</small>
++          </p>
++        </section>
++        <section>
++          <h2>Slide 2</h2>
++          <p>
++            <small>Press <em>space</em> to navigate.</small>
++          </p>
++        </section>
++      </div>
++    </div>
+                   <script type="module" src="/src/renderer.ts"></script>
+                 </body>
+               </html>
+              </script>
+            </code>
+          </pre>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Now what? Build the app.</h2>
+          <aside class="notes">
+            Now that we've got our app, what do we do with it?
+            We need to make it.
+            We need to package it up so that we can publish it.
+          </aside>
+        </section>
+
+        <section>
+          <h2 class="r-fit-text">Electron Forge Build flow</h2>
+          <img class="r-stretch" src="./assets/build-flow-04042b08.webp" alt="Electron forge build flow" />
+          <aside class="notes">
+            The build flow for Electron Forge is pretty straightforward.
+            Package the development app into an executable.
+            Make the installer/archive.
+            Publish the installer/archive.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Make</h2>
+          <pre><code class="bash">> yarn make</code></pre>
+          <p class="fragment">This builds the app, but only for the platform and architecture that we're running on</p>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2 class="r-fit-text">Continuous Integration</h2>
+          <p>Continuous Integration (CI) servers automate the process of building, testing, and deploying software.</p>
+          <aside class="notes">
+            Also known as build servers for the sake of this presentation.
+            CI servers can be used to build Electron Forge applications across platforms and publish them to
+            destinations like GitHub.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Github Actions</h2>
+          <p><code>.github\workflows\build.yml</code></p>
+          <pre><code class="yaml" data-line-numbers="2|5|6|8|9-12|13-14|15-16|19|32">name: Build
+on: [push, pull_request]
+
+jobs:
+build_on_linux:
+  runs-on: ubuntu-latest
+  steps:
+  - uses: actions/checkout@v4
+  - uses: actions/setup-node@v4
+    with:
+      node-version: 20
+      cache: 'yarn'
+  - name: install dependencies
+    run: yarn install --frozen-lockfile
+  - name: build
+    run: yarn make
+
+build_on_mac:
+  runs-on: macos-latest
+  steps:
+  - uses: actions/checkout@v4
+  - uses: actions/setup-node@v4
+    with:
+      node-version: 20
+      cache: 'yarn'
+  - name: install dependencies
+    run: yarn install --frozen-lockfile
+  - name: build
+    run: yarn make
+
+build_on_win:
+  runs-on: windows-latest
+  steps:
+  - uses: actions/checkout@v4
+  - uses: actions/setup-node@v4
+    with:
+      node-version: 20
+      cache: 'yarn'
+  - name: install dependencies
+    run: yarn install --frozen-lockfile
+  - name: build
+    run: yarn make
+  </code></pre>
+          <aside class="notes">
+            <pre wrap>
+This is the Github Actions workflow file.
+It's telling Github Actions to run the build job on push and pull requests.
+It's also telling Github Actions to run the build job on linux, macos, and windows.
+This is where you would add other jobs, like tests.
+            </pre>
+          </aside>
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Github Actions output</h2>
+          <img src="./assets/github_build_output-d058fe2e.png" alt="Github Actions output" />
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Github Actions output</h2>
+          <pre><code class="accesslog" data-line-numbers="15">2024-01-07T19:02:37.4133562Z [SUCCESS] Packaging for x64 on linux
+2024-01-07T19:02:37.4136941Z [SUCCESS] Packaging application
+2024-01-07T19:02:37.4139422Z [STARTED] Running postPackage hook
+2024-01-07T19:02:37.4151546Z [SUCCESS] Running postPackage hook
+2024-01-07T19:02:37.4154633Z [SUCCESS] Running package command
+2024-01-07T19:02:37.4159280Z [STARTED] Running preMake hook
+2024-01-07T19:02:37.4163560Z [SUCCESS] Running preMake hook
+2024-01-07T19:02:37.4166061Z [STARTED] Making distributables
+2024-01-07T19:02:37.4236812Z [STARTED] Making a rpm distributable for linux/x64
+2024-01-07T19:02:37.4237720Z [STARTED] Making a deb distributable for linux/x64
+2024-01-07T19:03:23.3442831Z [SUCCESS] Making a rpm distributable for linux/x64
+2024-01-07T19:04:18.5408627Z [SUCCESS] Making a deb distributable for linux/x64
+2024-01-07T19:04:18.5412812Z [SUCCESS] Making distributables
+2024-01-07T19:04:18.5414696Z [STARTED] Running postMake hook
+2024-01-07T19:04:18.5419362Z [DATA] Artifacts available at: /home/runner/work/avljs-electron-presentation/avljs-electron-presentation/out/make
+2024-01-07T19:04:18.5422178Z [SUCCESS] Running postMake hook
+2024-01-07T19:04:18.6942809Z Done in 109.17s.
+          </code></pre>
+          <aside class="notes">
+            This is the output from the Github Actions build.
+            It's also telling us where the artifacts are located.
+            We could use the artifacts utility in GitHub Actions to upload the artifacts where we can download them...
+            That's nice and all, but we want to publish them.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Code Signing</h2>
+          <p>Code signing is the process of digitally signing your application's executable files to verify their
+            authenticity and integrity.</p>
+          <p>It helps users trust that the application comes from a known source and hasn't been tampered with.</p>
+          <p>You <em>need</em> to do it.</p>
+          <p>You need code signing certificates, they're not free.</p>
+          <p>See <a href="https://www.electronforge.io/guides/code-signing">Electron Forge's code signing guide</a> for
+            more info</p>
+          <aside class="notes">
+            Code signing is a _thing_. You need to do it if you're serious about distributing your application
+            and it happens in the build step. There's a lot of resources out there for how to do it.
+          </aside>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Publishing your app</h2>
+          <p>Once you have built your Electron Forge application, you need to publish it to make it available to users.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="r-fit-text">Adding the publisher npm package</h2>
+          <p class="r-fit-text">Add the "@electron-forge/publisher-github" npm package:</p>
+          <pre><code class="bash">
+yarn add --dev @electron-forge/publisher-github
+  </code></pre>
+        </section>
+
+        <section>
+          <h2 class="r-fit-text">Publisher configuration</h2>
+          <p><code>forge.config.ts</code></p>
+          <pre><code class="diff" data-line-numbers="9-20"><script type="text/template">diff --git a/forge.config.ts b/forge.config.ts
+index ec2b06b..93d4b66 100644
+--- a/forge.config.ts
++++ b/forge.config.ts
+@@ -9,6 +9,18 @@ const config: ForgeConfig = {
+    packagerConfig: {},
+    rebuildConfig: {},
+    makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
++  publishers: [
++    {
++      name: '@electron-forge/publisher-github',
++      config: {
++        repository: {
++          owner: '<your_github_username>',
++          name: 'my-electron-app',
++        },
++        draft: true,  
++      },
++    },
++  ],
+    plugins: [
+      new VitePlugin({
+        // `build` can specify multiple entry builds, which can be Main process, Preload scripts, Worker process, etc.
+      </script></code></pre>
+        </section>
+
+        <section>
+          <h2 class="r-fit-text">Setting Github Actions runner permissions</h2>
+          <p>In order for the Github publisher to run successfully, you need to set the necessary permissions for the
+            Github Actions runner.</p>
+          <img class="r-stretch" src="./assets/workflow-permissions-b766476b.PNG" alt="Github Actions workflow permissions" />
+          <aside class="notes">
+            <pre wrap>This is the Github Actions workflow permissions page.
+You need to set the write permission for the Github Actions runner to be able to create the draft release.
+            </pre>
+          </aside>
+        </section>
+
+        <section>
+          <h2 class="r-fit-text">Add publish action</h2>
+          <p><code>.github\workflows\release.yml</code></p>
+          <pre><code class="yaml" data-line-numbers="2-5|10|11-16|19-20|20-25|26-27|28-31">name: Release
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os:
+          [
+            { name: 'linux', image: 'ubuntu-latest' },
+            { name: 'windows', image: 'windows-latest' },
+            { name: 'macos', image: 'macos-latest' },
+          ]
+    runs-on: ${{ matrix.os.image }}
+    steps:
+      - name: Github checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+      - name: install dependencies
+        run: yarn install --frozen-lockfile
+      - name: publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn run publish</code></pre>
+          <aside class="notes">
+            <pre wrap>
+This is the Github Actions release workflow file.
+It's telling Github Actions to run the release job on tag push with a version number.
+It's also telling Github Actions to run the release job on linux, macos, and windows.
+            </pre>
+          </aside>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Push a tag</h2>
+          <p>After configuring the publisher and providing the necessary permissions, you can push a version tag to run the
+            publish action.</p>
+          <p>This will create a draft release on your Github repository.</p>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Push a tag</h2>
+          <img src="./assets/release-screenshot-ae74de0d.png" alt="Github draft release" />
+        </section>
+
+      </section>
+
+      <section>
+        <section>
+          <h2 class="r-fit-text">Auto-update with Electron Forge</h2>
+          <p>When using the GitHub publisher with an open source project:</p>
+          <pre class="fragment"><code class="bash">yarn add update-electron-app</code></pre>
+          <div class="fragment">
+            <p style="font-size:0.4em"><code>main.ts</code></p>
+            <pre><code class="javascript">import { updateElectronApp } from 'update-electron-app';
+updateElectronApp();</code></pre>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Congratulations!</h2>
+          <p>You have a cross-platform auto-updating Electron App</p>
+        </section>
+      </section>
+
+      <section>
+        <section data-auto-animate>
+          <img class="r-stretch" src="./assets/could-470c610e.gif" />
+        </section>
+
+        <section data-auto-animate>
+          <img class="r-stretch" src="./assets/should-1cc6ba7f.gif" />
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Why is <em>this</em> an Electron app?</h2>
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Why is <em>this</em> an Electron app?</h2>
+          <p>It's was useful as an example.</p>
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Does it need to be an Electron app?</h2>
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Does it need to be an Electron app?</h2>
+          <p>Resoundingly no!</p>
+          <aside class="notes">
+            Electron is a great tool, but it's not the right tool for every job.
+            This is the sort of app that gives Electron apps a bad name.
+          </aside>
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Does <em>your app</em> need to be an Electron app?</h2>
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Does <em>your app</em> need to be an Electron app?</h2>
+          <p>Probably not.</p>
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Advancements in PWAs</h2>
+          <p>Progressive Web Apps (PWAs) have made significant advancements in recent years, offering capabilities that
+            were once exclusive to frameworks like Electron.</p>
+          <ul>
+            <li>Offline support</li>
+            <li>Push notifications</li>
+            <li>Background sync</li>
+            <li>Access to device features: camera, microphone, and geolocation</li>
+          </ul>
+        </section>
+
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Advancements in PWAs</h2>
+          <img class="r-stretch" src="./assets/pwatoday-e28e606b.png" />
+          <small>https://whatpwacando.today</small>
+          <aside class="notes"> <pre wrap>
+This is a screenshot of the whatpwacando.today website.
+It's a great resource for learning about what PWAs can do.
+Platform independence: PWAs can run on any device with a modern web browser, eliminating the need for separate builds for different platforms.
+Easy distribution: PWAs can be easily distributed through the web, without the need for app stores or complex installation processes.
+              </pre>
+          </aside>
+        </section>
+
+        <section>
+          <h2><em>Even USB</em></h2>
+          <p>Tidepool Uploader is now moving to a standard web app</p>
+          <p>Chrome now has WebUSB, Web Serial, Web Bluetooth and WebHID</p>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Questions?</h2>
+        </section>
+
+        <section>
+          <h2>Thank you!</h2>
+          <img class="r-stretch" src="./assets/with_great_power-ecc7c0c8.gif" />
+        </section>
+      </section>
+
+    </div>
+    
+</body>
+
+</html>
